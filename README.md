@@ -6,12 +6,17 @@
 
 ## 一段話安裝（推薦）
 
-把下面這段話貼進你的 Claude Code 或 Codex：
+把下面這段話貼進 Claude Code 或 Codex 的對話框，不用分辨自己用的是哪一個，AI 會自己判斷並完成安裝：
 
 ```text
-請幫我安裝 examscloud 的 MCP：讀 https://github.com/lkm543/examscloud-mcp/blob/main/INSTALL.md ，
-依我目前使用的工具（Claude Code 或 Codex）照裡面的指令安裝，裝完後幫我呼叫一次 search_questions 確認可用。
+請幫我把「考試雲 examscloud」加成你的 MCP server（HTTP 傳輸，網址 https://examscloud.net/mcp）。
+- 如果你是 Claude Code：在終端機執行 `claude mcp add --transport http --scope user examscloud https://examscloud.net/mcp`，然後提醒我輸入 /mcp、選 examscloud 登入授權。
+- 如果你是 Codex：在終端機執行 `codex mcp add examscloud --url https://examscloud.net/mcp`，再執行 `codex mcp login examscloud`（會開瀏覽器讓我登入並按同意）。
+- 若已經有同名的 examscloud 設定，先問我要不要覆蓋。不要向我要密碼或 token，也不要改用其他網址。
+授權完成後，呼叫 examscloud 的 search_questions 搜尋「消滅時效」取 3 題，確認可以使用。
 ```
+
+這段話也在 examscloud.net 會員中心「AI 工具連線」一鍵複製。想讓 AI 讀完整步驟，可改請它照 [INSTALL.md](INSTALL.md) 安裝。
 
 第一次使用時，工具會開啟瀏覽器請你登入考試雲並按「同意」，**不需要複製密碼或 token**。
 
