@@ -1,0 +1,17 @@
+{
+  "name": "examscloud",
+  "owner": {
+    "name": "lkm543",
+    "url": "https://examscloud.net"
+  },
+  "metadata": {
+    "description": "考試雲 examscloud：考古題、官方答案、AI 擬答與學習紀錄的 MCP 連線與學習指令"
+  },
+  "plugins": [
+    {
+      "name": "examscloud",
+      "source": "./plugins/examscloud",
+      "description": "連線考試雲 MCP（https://examscloud.net/mcp），附模擬練習、今日複習、讀書計畫與錯題筆記指令"
+    }
+  ]
+}

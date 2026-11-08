@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "examscloud": {
+      "type": "http",
+      "url": "https://examscloud.net/mcp"
+    }
+  }
+}

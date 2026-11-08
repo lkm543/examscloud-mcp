@@ -1,0 +1,13 @@
+{
+  "name": "examscloud",
+  "version": "1.0.0",
+  "description": "考試雲 examscloud MCP：在 Claude Code 搜尋考古題、讀官方答案與 AI 擬答，並練習交卷、複習錯題（結果寫回考試雲）",
+  "author": {
+    "name": "lkm543",
+    "url": "https://examscloud.net"
+  },
+  "homepage": "https://examscloud.net/profile?tab=ai",
+  "repository": "https://github.com/lkm543/examscloud-mcp",
+  "license": "MIT",
+  "keywords": ["exam", "考古題", "國家考試", "mcp", "education"]
+}
