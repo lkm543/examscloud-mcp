@@ -39,9 +39,12 @@
 | `get_draft`、`get_concept_card`、`get_corrections` | 完整 AI 擬答、概念圖卡、修正紀錄 | 登入（扣帳號擬答額度） |
 | `start_practice`、`get_practice_questions`、`submit_practice` | 在 AI 裡練習整卷並交卷計分；結果寫回網站的作答紀錄與錯題本 | 登入 |
 | `get_review_queue`、`list_wrong_questions`、`update_wrong_question` | 今日複習、錯題本、標記已掌握 | 登入 |
+| `report_question` | 回報題目錯字、缺圖、選項或答案錯誤（每人每天 20 題） | 登入 |
 | `list_attempts`、`get_study_report`、`export_my_data` | 作答紀錄、學習統計、分頁匯出本人資料做分析 | 登入 |
 
-Claude Code plugin 另附四個指令：`/examscloud:practice`、`/examscloud:review`、`/examscloud:study-plan`、`/examscloud:wrong-notes`。
+Claude Code plugin 另附四個指令：`/examscloud:practice`、`/examscloud:review`、`/examscloud:study-plan`、`/examscloud:wrong-notes`。同樣的流程也以 MCP prompts（`practice`、`review`、`study-plan`、`wrong-notes`）提供，Codex、claude.ai 等不支援 plugin 的工具也能用。
+
+交卷時沒作答的題目會跟網頁模擬考一樣算答錯並進錯題本。
 
 ## 用你的資料做分析或二度開發
 

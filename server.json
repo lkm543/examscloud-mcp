@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.lkm543/examscloud",
+  "title": "考試雲 examscloud",
+  "description": "Taiwan national exam past papers, official answers, AI explanations and your own practice records.",
+  "version": "1.0.0",
+  "websiteUrl": "https://examscloud.net",
+  "repository": {
+    "url": "https://github.com/lkm543/examscloud-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://examscloud.net/mcp"
+    }
+  ]
+}
