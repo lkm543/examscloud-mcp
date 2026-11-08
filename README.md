@@ -16,7 +16,7 @@
 授權完成後，呼叫 examscloud 的 search_questions 搜尋「消滅時效」取 3 題，確認可以使用。
 ```
 
-這段話也在 examscloud.net 會員中心「AI 工具連線」一鍵複製。想讓 AI 讀完整步驟，可改請它照 [INSTALL.md](INSTALL.md) 安裝。
+不想開瀏覽器授權：到 examscloud.net 會員中心「AI 工具連線」按「產生我的一段話」，那段話已帶你的個人 token，複製貼上就完成（token 只顯示一次，請勿分享）。想讓 AI 讀完整步驟，可改請它照 [INSTALL.md](INSTALL.md) 安裝。
 
 第一次使用時，工具會開啟瀏覽器請你登入考試雲並按「同意」，**不需要複製密碼或 token**。
 
