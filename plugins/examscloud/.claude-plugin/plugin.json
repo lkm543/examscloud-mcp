@@ -1,6 +1,6 @@
 {
   "name": "examscloud",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "考試雲 examscloud MCP：在 Claude Code 搜尋考古題、讀官方答案與 AI 擬答，並練習交卷、複習錯題（結果寫回考試雲）",
   "author": {
     "name": "lkm543",
