@@ -4,32 +4,13 @@
 
 這個 repo 只放**安裝設定、Claude Code plugin 與範例**；伺服器由 examscloud.net 提供，這裡沒有任何題庫資料或密鑰。
 
-## 一段話安裝（推薦）
+## 安裝：一段話
 
-把下面這段話貼進 Claude Code 或 Codex 的對話框，不用分辨自己用的是哪一個，AI 會自己判斷並完成安裝：
+1. 登入 [examscloud.net](https://examscloud.net)，到會員中心「AI 工具連線」按「產生我的一段話」。
+2. 複製那段話，貼進 Claude Code 或 Codex 的對話框。不用分辨自己用的是哪一個，AI 會自己判斷並完成設定。
+3. 設定完成後新開一個對話，就能使用下面的工具。
 
-```text
-請幫我把「考試雲 examscloud」加成你的 MCP server（HTTP 傳輸，網址 https://examscloud.net/mcp）。
-- 如果你是 Claude Code：在終端機執行 `claude mcp add --transport http --scope user examscloud https://examscloud.net/mcp`，然後提醒我輸入 /mcp、選 examscloud 登入授權。
-- 如果你是 Codex：在終端機執行 `codex mcp add examscloud --url https://examscloud.net/mcp`，再執行 `codex mcp login examscloud`（會開瀏覽器讓我登入並按同意）。
-- 若已經有同名的 examscloud 設定，先問我要不要覆蓋。不要向我要密碼或 token，也不要改用其他網址。
-授權完成後，呼叫 examscloud 的 search_questions 搜尋「消滅時效」取 3 題，確認可以使用。
-```
-
-不想開瀏覽器授權：到 examscloud.net 會員中心「AI 工具連線」按「產生我的一段話」，那段話已帶你的個人 token，複製貼上就完成（token 只顯示一次，請勿分享）。想讓 AI 讀完整步驟，可改請它照 [INSTALL.md](INSTALL.md) 安裝。
-
-第一次使用時，工具會開啟瀏覽器請你登入考試雲並按「同意」，**不需要複製密碼或 token**。
-
-## 手動安裝
-
-| 工具 | 做法 |
-|---|---|
-| Claude Code | `claude mcp add --transport http examscloud https://examscloud.net/mcp`，或安裝 plugin：`/plugin marketplace add lkm543/examscloud-mcp` → `/plugin install examscloud@examscloud`，然後 `/mcp` 登入 |
-| Codex | `codex mcp add examscloud --url https://examscloud.net/mcp`，然後 `codex mcp login examscloud` |
-| claude.ai／其他支援自訂連接器的工具 | 新增自訂連接器，網址 `https://examscloud.net/mcp` |
-| 不登入先試用 | 連 `https://examscloud.net/mcp/public`（只有考古題與官方答案，額度較低） |
-
-指令語法以各工具官方文件為準。設定範例見 [`codex/config.toml.example`](codex/config.toml.example)。
+那段話含你的個人 token（90 天到期、只顯示一次），只貼進你自己的 AI 工具，不要分享或截圖；外流或不用時，可在同一頁撤銷。
 
 ## 可以做什麼
 
@@ -43,7 +24,7 @@
 | `send_feedback` | 把問題或缺漏回報給考試雲（題目有誤、缺試卷／題目／答案／音檔、網站或工具故障、建議）；AI 會先請你確認內容再送出，想收到回覆可留 email | 免登入可用（有次數上限） |
 | `list_attempts`、`get_study_report`、`export_my_data` | 作答紀錄、學習統計、分頁匯出本人資料做分析 | 登入 |
 
-Claude Code plugin 另附四個指令：`/examscloud:practice`、`/examscloud:review`、`/examscloud:study-plan`、`/examscloud:wrong-notes`。同樣的流程也以 MCP prompts（`practice`、`review`、`study-plan`、`wrong-notes`）提供，Codex、claude.ai 等不支援 plugin 的工具也能用。
+另有四個 MCP prompts：`practice`（練習）、`review`（今日複習）、`study-plan`（讀書計畫）、`wrong-notes`（錯題筆記）。
 
 交卷時沒作答的題目會跟網頁模擬考一樣算答錯並進錯題本。
 
@@ -56,9 +37,9 @@ Claude Code plugin 另附四個指令：`/examscloud:practice`、`/examscloud:re
 - **你的作答與錯題紀錄**：不限用途。
 - **考古題與官方答案**：個人學習與分析；引用時請標示「資料來源：考試雲 examscloud」並附題目網址。**只能逐題、逐卷依額度取得，不提供整科、整年度或全庫下載，請勿以程式大量擷取。**
 - **AI 擬答與概念圖卡**：AI 生成、可能有誤；限個人使用，不得再散布。
-- 正式條款以 examscloud.net 公告為準；違反規範的 token 或授權可能被撤銷。
+- 正式條款以 examscloud.net 公告為準；違反規範的 token 可能被撤銷。
 
-可隨時在 examscloud.net 會員中心「AI 工具連線」查看與撤銷已授權的工具和已產生的一段話（token）。
+可隨時在 examscloud.net 會員中心「AI 工具連線」查看與撤銷已產生的一段話（token）。
 
 ## 授權
 
