@@ -35,11 +35,12 @@
 
 | 工具 | 說明 | 需要 |
 |---|---|---|
-| `search_questions`、`get_question`、`get_answer`、`get_paper` | 搜尋考古題、讀單題（預設不給答案）、官方答案、分頁讀整卷 | 免登入可用 |
+| `search_questions`、`get_question`、`get_answer`、`get_paper` | 搜尋考古題、讀單題（預設不給答案）、官方答案、分頁讀整卷；聽力題另附官方音檔網址（`listening_audio`，免登入可直接播放） | 免登入可用 |
 | `get_draft`、`get_concept_card`、`get_corrections` | 完整 AI 擬答、概念圖卡、修正紀錄 | 登入（扣帳號擬答額度） |
 | `start_practice`、`get_practice_questions`、`submit_practice` | 在 AI 裡練習整卷並交卷計分；結果寫回網站的作答紀錄與錯題本 | 登入 |
 | `get_review_queue`、`list_wrong_questions`、`update_wrong_question` | 今日複習、錯題本、標記已掌握 | 登入 |
 | `report_question` | 回報題目錯字、缺圖、選項或答案錯誤（每人每天 20 題） | 登入 |
+| `send_feedback` | 把問題或缺漏回報給考試雲（題目有誤、缺試卷／題目／答案／音檔、網站或工具故障、建議）；AI 會先請你確認內容再送出，想收到回覆可留 email | 免登入可用（有次數上限） |
 | `list_attempts`、`get_study_report`、`export_my_data` | 作答紀錄、學習統計、分頁匯出本人資料做分析 | 登入 |
 
 Claude Code plugin 另附四個指令：`/examscloud:practice`、`/examscloud:review`、`/examscloud:study-plan`、`/examscloud:wrong-notes`。同樣的流程也以 MCP prompts（`practice`、`review`、`study-plan`、`wrong-notes`）提供，Codex、claude.ai 等不支援 plugin 的工具也能用。
