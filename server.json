@@ -3,7 +3,7 @@
   "name": "io.github.lkm543/examscloud",
   "title": "考試雲 examscloud",
   "description": "Taiwan national exam past papers, official answers, AI explanations and your own practice records.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "websiteUrl": "https://examscloud.net",
   "repository": {
     "url": "https://github.com/lkm543/examscloud-mcp",
@@ -12,7 +12,24 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://examscloud.net/mcp"
+      "url": "https://examscloud.net/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Your examscloud personal token. Get it at examscloud.net → 會員中心「AI 工具連線」→「產生我的一段話」 (the string after \"Bearer\").",
+          "isRequired": true,
+          "isSecret": true,
+          "value": "Bearer {token}",
+          "variables": {
+            "token": {
+              "description": "Personal token from 「產生我的一段話」 (starts with exc_mcp_; shown once, expires in 90 days)",
+              "isRequired": true,
+              "isSecret": true,
+              "placeholder": "exc_mcp_..."
+            }
+          }
+        }
+      ]
     }
   ]
 }
