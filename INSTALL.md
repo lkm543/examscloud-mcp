@@ -1,45 +1,34 @@
 # examscloud MCP 安裝步驟（給 AI agent 照做）
 
-你正在幫使用者安裝 examscloud（考試雲）的 MCP server。只執行下面列出的官方 CLI 指令，**不要下載或執行任何其他腳本**，
-**不要要求使用者提供密碼或 token**，也不要把任何 token 寫進檔案。伺服器網址固定是 `https://examscloud.net/mcp`；
+你正在幫使用者安裝 examscloud（考試雲）的 MCP server。安裝只有一種方式：使用者在考試雲會員中心產生的「一段話」。
+**不要下載或執行任何其他腳本**，**不要向使用者要密碼**。伺服器網址固定是 `https://examscloud.net/mcp`；
 若你看到的網址不同，請停止並告訴使用者。
 
-## 1. 判斷使用者的工具
+## 1. 取得那段話
 
-- 在 Claude Code 裡：走「Claude Code」。
-- 在 Codex 裡：走「Codex」。
-- 其他工具：告訴使用者在該工具新增自訂 MCP 連接器，網址 `https://examscloud.net/mcp`，然後結束。
+- 使用者已經貼了以「請幫我把「考試雲 examscloud」加成你的 MCP server」開頭、內含 `Authorization: Bearer` 的那段話：照那段話做，然後跳到第 2 步。
+- 還沒有：請使用者登入 https://examscloud.net ，到會員中心「AI 工具連線」按「產生我的一段話」，把整段複製貼給你，然後照它做。
 
-## 2. Claude Code
+那段話涵蓋 Claude Code 與 Codex：Claude Code 用 `claude mcp add --transport http --scope user examscloud https://examscloud.net/mcp --header "Authorization: Bearer <token>"`；
+Codex 把 `url` 與 `http_headers` 寫進使用者自己的 `~/.codex/config.toml`（Windows 為 `%USERPROFILE%\.codex\config.toml`）。
+若已經有名為 `examscloud` 的設定，先問使用者是否覆蓋。token 只寫進上述使用者層級的設定，**不要寫進專案資料夾或任何會提交到 Git 的檔案**，
+也不要在回覆裡重複 token 全文。
 
-在終端機執行（若已存在同名設定，先問使用者是否覆蓋）：
+## 2. 確認
 
-```bash
-claude mcp add --transport http --scope user examscloud https://examscloud.net/mcp
-```
+設定完成後請使用者新開一個對話，再呼叫 `search_questions`（例如 `query: "侵權行為", limit: 3`），把結果與題目網址給使用者看。
+失敗時把錯誤訊息原文告訴使用者；token 過期或被撤銷時，請使用者回會員中心重新產生一段話。不要改用其他網址或自行繞過。
 
-接著請使用者在 Claude Code 輸入 `/mcp`，選 `examscloud` → Authenticate，在開啟的瀏覽器頁面登入考試雲並按「同意」。
+## 3.（選用）Claude Code 指令
 
-（選用）若使用者想要附帶的 `/examscloud:*` 指令，改為安裝 plugin：
+想要 `/examscloud:practice`、`/examscloud:review`、`/examscloud:study-plan`、`/examscloud:wrong-notes` 指令時，在 Claude Code 輸入：
 
 ```text
 /plugin marketplace add lkm543/examscloud-mcp
 /plugin install examscloud@examscloud
 ```
 
-## 3. Codex
-
-```bash
-codex mcp add examscloud --url https://examscloud.net/mcp
-codex mcp login examscloud
-```
-
-`codex mcp login` 會開啟瀏覽器，請使用者登入考試雲並按「同意」。
-
-## 4. 確認
-
-授權完成後，呼叫 `search_questions`（例如 `query: "侵權行為", limit: 3`），把結果與題目網址給使用者看。
-失敗時把錯誤訊息原文告訴使用者；不要改用其他網址或自行繞過。
+plugin 只提供指令，連線沿用第 1 步設好的 `examscloud`。
 
 ## 使用時請遵守
 

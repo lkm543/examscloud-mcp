@@ -1,8 +1,8 @@
-# Codex：~/.codex/config.toml
-# 建議用 `codex mcp add examscloud --url https://examscloud.net/mcp` 再 `codex mcp login examscloud`（OAuth，免 token）。
-# 不支援 OAuth 的環境（例如 CI 或自己的腳本）才改用個人 token：在 examscloud.net 會員中心「AI 工具連線」
-# 按「產生我的一段話」，取那段話裡 Bearer 後面那串，放進環境變數 EXAMSCLOUD_MCP_TOKEN，不要直接寫在這個檔案裡。
+# Codex：~/.codex/config.toml（Windows 為 %USERPROFILE%\.codex\config.toml）
+# 通常不用手動改：在 examscloud.net 會員中心「AI 工具連線」按「產生我的一段話」，貼進 Codex，它會幫你寫好。
+# 要自己設定時，取那段話裡 Bearer 後面那串個人 token，放進環境變數 EXAMSCLOUD_MCP_TOKEN，
+# 不要直接寫在會提交到 Git 的檔案裡。
 
 [mcp_servers.examscloud]
 url = "https://examscloud.net/mcp"
-# bearer_token_env_var = "EXAMSCLOUD_MCP_TOKEN"
+bearer_token_env_var = "EXAMSCLOUD_MCP_TOKEN"
