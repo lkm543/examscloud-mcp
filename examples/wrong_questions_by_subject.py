@@ -2,7 +2,7 @@
 """統計你在考試雲的錯題科目分布（只用 Python 標準函式庫）。
 
 用法：
-    export EXAMSCLOUD_MCP_TOKEN=exc_mcp_...   # 會員中心「AI 工具連線」建立，需勾選「讀取我的作答紀錄、錯題本」
+    export EXAMSCLOUD_MCP_TOKEN=exc_mcp_...   # 會員中心「AI 工具連線」按「產生我的一段話」，取 Bearer 後面那串
     python3 wrong_questions_by_subject.py
 
 只讀你本人的錯題紀錄（export_my_data），不抓題目全文或答案。token 只從環境變數讀取，不要寫進檔案。
