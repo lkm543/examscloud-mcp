@@ -6,7 +6,7 @@
 
 共通做法：
 
-1. 到 examscloud.net 會員中心「AI 工具連線」建立個人 token，勾選「讀取我的作答紀錄、錯題本」。
+1. 到 examscloud.net 會員中心「AI 工具連線」按「產生我的一段話」，複製那段話裡 `Bearer` 後面那串個人 token（只顯示一次，已含讀取作答紀錄與錯題本的權限）。
 2. `export EXAMSCLOUD_MCP_TOKEN=...`（token 只放環境變數，不要寫進檔案或提交到 Git）。
 3. 以 JSON-RPC `tools/call` 呼叫 `https://examscloud.net/mcp`（範例程式已示範）。
 

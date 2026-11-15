@@ -49,7 +49,7 @@ Claude Code plugin 另附四個指令：`/examscloud:practice`、`/examscloud:re
 
 ## 用你的資料做分析或二度開發
 
-[`examples/`](examples/) 有只用 Python 標準函式庫的範例，例如統計你的錯題科目分布。程式以個人 token（會員中心「AI 工具連線」建立）呼叫 `https://examscloud.net/mcp`；請把 token 放在環境變數 `EXAMSCLOUD_MCP_TOKEN`，**不要寫進會提交到 Git 的檔案**。
+[`examples/`](examples/) 有只用 Python 標準函式庫的範例，例如統計你的錯題科目分布。程式以你的個人 token 呼叫 `https://examscloud.net/mcp`：在會員中心「AI 工具連線」按「產生我的一段話」，那段話裡 `Bearer` 後面那串就是（只顯示一次）；請把 token 放在環境變數 `EXAMSCLOUD_MCP_TOKEN`，**不要寫進會提交到 Git 的檔案**。
 
 ## 使用規範
 
@@ -58,7 +58,7 @@ Claude Code plugin 另附四個指令：`/examscloud:practice`、`/examscloud:re
 - **AI 擬答與概念圖卡**：AI 生成、可能有誤；限個人使用，不得再散布。
 - 正式條款以 examscloud.net 公告為準；違反規範的 token 或授權可能被撤銷。
 
-可隨時在 examscloud.net 會員中心「AI 工具連線」查看與撤銷已授權的工具和 token。
+可隨時在 examscloud.net 會員中心「AI 工具連線」查看與撤銷已授權的工具和已產生的一段話（token）。
 
 ## 授權
 
