@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""統計你在考試雲的錯題科目分布（只用 Python 標準函式庫）。
+"""統計你在考古雲的錯題科目分布（只用 Python 標準函式庫）。
 
 用法：
     export EXAMSCLOUD_MCP_TOKEN=exc_mcp_...   # 會員中心「AI 工具連線」按「產生我的一段話」，取 Bearer 後面那串

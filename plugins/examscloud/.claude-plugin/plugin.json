@@ -1,7 +1,7 @@
 {
   "name": "examscloud",
-  "version": "1.3.0",
-  "description": "考試雲 examscloud 學習指令：模擬練習、今日複習、讀書計畫與錯題筆記（需先用會員中心「產生我的一段話」設好 examscloud MCP）",
+  "version": "1.3.1",
+  "description": "考古雲 ExamsCloud 學習指令：模擬練習、今日複習、讀書計畫與錯題筆記（需先用會員中心「產生我的一段話」設好 examscloud MCP）",
   "author": {
     "name": "lkm543",
     "url": "https://examscloud.net"

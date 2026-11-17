@@ -1,6 +1,6 @@
 # examscloud MCP
 
-在你自己的 AI 工具（Claude Code、Codex、claude.ai…）裡使用 [考試雲 examscloud](https://examscloud.net) 的考古題、官方答案、AI 擬答與你的學習紀錄。
+在你自己的 AI 工具（Claude Code、Codex、claude.ai…）裡使用 [考古雲 ExamsCloud](https://examscloud.net) 的考古題、官方答案、AI 擬答與你的學習紀錄。
 
 這個 repo 只放**安裝設定、Claude Code plugin 與範例**；伺服器由 examscloud.net 提供，這裡沒有任何題庫資料或密鑰。
 
@@ -21,7 +21,7 @@
 | `start_practice`、`get_practice_questions`、`submit_practice` | 在 AI 裡練習整卷並交卷計分；結果寫回網站的作答紀錄與錯題本 | 登入 |
 | `get_review_queue`、`list_wrong_questions`、`update_wrong_question` | 今日複習、錯題本、標記已掌握 | 登入 |
 | `report_question` | 回報題目錯字、缺圖、選項或答案錯誤（每人每天 20 題） | 登入 |
-| `send_feedback` | 把問題或缺漏回報給考試雲（題目有誤、缺試卷／題目／答案／音檔、網站或工具故障、建議）；AI 會先請你確認內容再送出，想收到回覆可留 email | 免登入可用（有次數上限） |
+| `send_feedback` | 把問題或缺漏回報給考古雲（題目有誤、缺試卷／題目／答案／音檔、網站或工具故障、建議）；AI 會先請你確認內容再送出，想收到回覆可留 email | 免登入可用（有次數上限） |
 | `list_attempts`、`get_study_report`、`export_my_data` | 作答紀錄、學習統計、分頁匯出本人資料做分析 | 登入 |
 
 另有四個 MCP prompts：`practice`（練習）、`review`（今日複習）、`study-plan`（讀書計畫）、`wrong-notes`（錯題筆記）。
@@ -35,7 +35,7 @@
 ## 使用規範
 
 - **你的作答與錯題紀錄**：不限用途。
-- **考古題與官方答案**：個人學習與分析；引用時請標示「資料來源：考試雲 examscloud」並附題目網址。**只能逐題、逐卷依額度取得，不提供整科、整年度或全庫下載，請勿以程式大量擷取。**
+- **考古題與官方答案**：個人學習與分析；引用時請標示「資料來源：考古雲 ExamsCloud」並附題目網址。**只能逐題、逐卷依額度取得，不提供整科、整年度或全庫下載，請勿以程式大量擷取。**
 - **AI 擬答與概念圖卡**：AI 生成、可能有誤；限個人使用，不得再散布。
 - 正式條款以 examscloud.net 公告為準；違反規範的 token 可能被撤銷。
 

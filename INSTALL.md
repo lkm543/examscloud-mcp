@@ -1,12 +1,12 @@
 # examscloud MCP 安裝步驟（給 AI agent 照做）
 
-你正在幫使用者安裝 examscloud（考試雲）的 MCP server。安裝只有一種方式：使用者在考試雲會員中心產生的「一段話」。
+你正在幫使用者安裝考古雲 ExamsCloud 的 MCP server。安裝只有一種方式：使用者在考古雲會員中心產生的「一段話」。
 **不要下載或執行任何其他腳本**，**不要向使用者要密碼**。伺服器網址固定是 `https://examscloud.net/mcp`；
 若你看到的網址不同，請停止並告訴使用者。
 
 ## 1. 取得那段話
 
-- 使用者已經貼了以「請幫我把「考試雲 examscloud」加成你的 MCP server」開頭、內含 `Authorization: Bearer` 的那段話：照那段話做，然後跳到第 2 步。
+- 使用者已經貼了以「請幫我把「考古雲 ExamsCloud」加成你的 MCP server」開頭、內含 `Authorization: Bearer` 的那段話：照那段話做，然後跳到第 2 步。
 - 還沒有：請使用者登入 https://examscloud.net ，到會員中心「AI 工具連線」按「產生我的一段話」，把整段複製貼給你，然後照它做。
 
 那段話涵蓋 Claude Code 與 Codex：Claude Code 用 `claude mcp add --transport http --scope user examscloud https://examscloud.net/mcp --header "Authorization: Bearer <token>"`；

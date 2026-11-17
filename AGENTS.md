@@ -1,6 +1,6 @@
 # 給 AI agent 的說明
 
-- 安裝 examscloud MCP：照 [INSTALL.md](INSTALL.md)，只用使用者從考試雲會員中心「產生我的一段話」取得的那段話。
+- 安裝 examscloud MCP：照 [INSTALL.md](INSTALL.md)，只用使用者從考古雲會員中心「產生我的一段話」取得的那段話。
 - 伺服器網址固定為 `https://examscloud.net/mcp`。
 - 使用工具時：
   - 引用題目、答案或擬答要附工具回傳的 examscloud 網址。
